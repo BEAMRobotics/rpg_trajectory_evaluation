@@ -40,11 +40,27 @@ Zichao Zhang, Davide Scaramuzza: A Tutorial on Quantitative Trajectory Evaluatio
 6. [Credits](#credits)
 
 ## Install
-The package is written in python and tested in Ubuntu 16.04 and 18.04.
-Currently only `python2` is supported.
-The package can be used as a ROS package as well as a standalone tool.
-To use it as a ROS package, simply clone it into your workspace.
-It only depends on [`catkin_simple`](https://github.com/catkin/catkin_simple) to build.
+This package has been tested within the Beam Robotics stack, and requires the following additional dependencies:
+* [`catkin_simple`](https://github.com/catkin/catkin_simple)
+```
+cd catkin_ws/
+git clone git@github.com:catkin/catkin_simple.git
+catkin build
+```
+* [`ruamel.yaml v0.15.20`](https://pypi.org/project/ruamel.yaml/0.15.20/)
+```
+pip install ruamel.yaml==0.15.20
+```
+* [`latex`](https://www.latex-project.org/)
+```
+sudo apt install texlive-latex-extra
+```
+once dependencies are installed/built, clone this package into your catkin workspace and build:
+```
+cd catkin_ws/
+git@github.com:BEAMRobotics/rpg_trajectory_evaluation.git
+catkin build
+```
 
 **Dependencies**: You will need install the following:
 
